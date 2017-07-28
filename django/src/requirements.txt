@@ -1,0 +1,2 @@
+-r requirements-develop.txt
+uwsgi==2.0.12

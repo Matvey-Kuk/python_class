@@ -1,0 +1,7 @@
+Django==1.10.4
+djangorestframework==3.6.2
+django-timezone-field==2.0
+django-filter==1.0.4
+social-auth-app-django==1.2.0
+psycopg2==2.7.1
+locustio==0.8a2

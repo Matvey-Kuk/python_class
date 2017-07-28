@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    environment:
+        POSTGRES_DB: project
+        POSTGRES_USER: project
+        POSTGRES_PASSWORD: somepass
+    volumes:
+      - ${DJANGO_DATA}:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: .
+    command: ./start_in_docker.sh
+    links:
+      - "db:db"
+
+  nginx:
+    ports:
+      - "${DJANGO_PORT}:80"

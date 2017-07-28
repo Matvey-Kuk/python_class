@@ -1,0 +1,9 @@
+aiohttp
+uvloop
+gunicorn
+
+Django==1.10.4
+djangorestframework==3.6.2
+django-timezone-field==2.0
+django-filter==1.0.4
+psycopg2==2.7.1
